@@ -1,5 +1,10 @@
 class Crawler
-	def say_hello(thing_to_say)
-		puts thing_to_say
+	def crawl
+		entry = BlogEntry.new
+		entry.author = "Laura"
+		entry.title = "Why ponies should rule our government"
+
+		display_name = "#{entry.title}... by:#{entry.author}"
+		puts display_name
 	end
-end		
+end
