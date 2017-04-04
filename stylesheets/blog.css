@@ -1,0 +1,21 @@
+#blog-header {
+	color: #05ad91;
+}
+
+th{
+	background-color: #05ad91;
+}
+
+table, td, th{
+	font:15px century;
+	border-width: 1px;
+	border-style:solid;
+	border-color: grey;
+}
+
+table{
+	width: 200px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
