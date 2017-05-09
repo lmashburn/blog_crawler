@@ -1,10 +1,16 @@
-class Crawler
-	def crawl
-		entry = BlogEntry.new
-		entry.author = "Laura"
-		entry.title = "Why ponies should rule our government"
+require 'nokogiri'
+require 'mechanize'
+require 'mechanize_adapter'
+require 'active_support/core_ext'
 
-		display_name = "#{entry.title}... by:#{entry.author}"
-		puts display_name
+class Crawler
+	include MechanizeAdapter
+
+	def crawl(url)
+		agent = Mechanize.new
+		agent.agent.http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+		blog_page = agent.get(url)
+
+		puts page.title
 	end
 end
