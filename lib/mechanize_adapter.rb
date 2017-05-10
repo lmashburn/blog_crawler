@@ -1,4 +1,5 @@
 # coding: utf-8
+require 'active_support'
 require 'active_support/core_ext'
 
 class Mechanize::Page
